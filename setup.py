@@ -7,7 +7,7 @@ setup(
     # This is the name of your project as to be published at PyPI: https://pypi.org/project/sampleproject/
     name="blm",  # https://packaging.python.org/specifications/core-metadata/#name
     version="1.0",  # https://www.python.org/dev/peps/pep-0440/
-    description="A simple model to describe the backlash effect into physics simulations",
+    description="A simple model to describe the backlash effect in physics simulations",
     long_description=(here / "README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     url="https://github.com/famura/blm",
