@@ -16,7 +16,7 @@ If you use code or ideas from this repository for your projects or research, ple
 @misc{Muratore_blm,
   author = {Fabio Muratore},
   title = {blm - A simple model to describe the backlash effect in physics simulations},
-  year = {2020},
+  year = {2021},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/famura/blm}}
