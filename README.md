@@ -13,7 +13,7 @@ J. Vörös, "Modeling and identification of systems with backlash", Automatica, 
 
 If you use code or ideas from this repository for your projects or research, please cite it.
 ```
-@misc{Muratore_SimuRLacra,
+@misc{Muratore_blm,
   author = {Fabio Muratore},
   title = {blm - A simple model to describe the backlash effect in physics simulations},
   year = {2020},
