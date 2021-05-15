@@ -1,5 +1,6 @@
 import pathlib
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 
 here = pathlib.Path(__file__).parent.resolve()
 
@@ -15,8 +16,8 @@ setup(
     author_email="fabio.muratore@famura.net",
     classifiers=[  # list of valid classifiers, see https://pypi.org/classifiers/
         "Development Status :: 4 - Beta",
+        "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3 :: Only",
@@ -32,7 +33,7 @@ setup(
     ],
     # List additional groups of dependencies, installed via `pip install -e .[dev]`
     extras_require={
-        "dev": ["black", "matplotlib", "pytest", "pytest-cov"],
+        "dev": ["black", "isort", "matplotlib", "pytest", "pytest-cov"],
     },
     project_urls={
         "Source": "https://github.com/famura/blm",

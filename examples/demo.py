@@ -7,22 +7,23 @@ Based on matplotlib's interactive slider demo
     https://matplotlib.org/3.1.1/gallery/widgets/slider_demo.html
 """
 
-import numpy as np
+from typing import Union
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider, Button
-from typing import Union
+import numpy as np
+from matplotlib.widgets import Button, Slider
 
 from blm import BacklashModel
 
 
 def lin_dec_sin(t: np.ndarray, t_end: float, amp: float, freq: float):
-    """ Linearly decaying sinus wave. """
+    """Linearly decaying sinus wave."""
     return amp * (1 - t / t_end) * np.cos(2 * np.pi * freq * t)
 
 
 def update(val):
-    """ Core callback function. """
+    """Core callback function."""
     reset_lbm_from_slider_values(x_init=lin_dec_sin(t_grid[0], t_end, amp, freq))
 
     # Generate backlash data
@@ -48,7 +49,7 @@ def update(val):
 
 
 def reset(event):
-    """ Reset the sliders. """
+    """Reset the sliders."""
     G_slider_m_lo.reset()
     G_slider_m_up.reset()
     G_slider_c_lo.reset()
@@ -56,7 +57,7 @@ def reset(event):
 
 
 def reset_lbm_from_slider_values(x_init: Union[float, int, list, np.ndarray]):
-    """ Use the global slider values to create a new linear backlash model. """
+    """Use the global slider values to create a new linear backlash model."""
     # Catch infeasible values
     if G_slider_m_lo.val == 0:
         G_slider_m_lo.val = 1e-4

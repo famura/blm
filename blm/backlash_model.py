@@ -1,7 +1,8 @@
+from typing import Optional, Union
+
 import numpy as np
 from tabulate import tabulate
 from tqdm import tqdm
-from typing import Union, Optional
 
 
 class BacklashModel:
@@ -64,7 +65,7 @@ class BacklashModel:
         return x_curr
 
     def __str__(self):
-        """ Get the information formatted in a table. """
+        """Get the information formatted in a table."""
         return tabulate([["m_lo", self.m_lo], ["m_up", self.m_up], ["c_lo", self.c_lo], ["c_up", self.c_up]])
 
     def reset(
@@ -108,28 +109,28 @@ class BacklashModel:
 
     @property
     def z_lo(self) -> np.ndarray:
-        """ Get the intersection of the lower threshold line with the u-axis (abscissa). """
+        """Get the intersection of the lower threshold line with the u-axis (abscissa)."""
         return self._x_prev / self.m_lo - self.c_lo
 
     @property
     def z_up(self) -> np.ndarray:
-        """ Get the intersection of the upper threshold line with the u-axis (abscissa). """
+        """Get the intersection of the upper threshold line with the u-axis (abscissa)."""
         return self._x_prev / self.m_up + self.c_up
 
     @staticmethod
     def h(s: np.ndarray) -> np.ndarray:
-        """ Step function, see (4) in [1] """
+        """Step function, see (4) in [1]"""
         s_copy = s.copy()
         s_copy[s > 0] = 0
         s_copy[s <= 0] = 1
         return s_copy
 
     def f_1(self, u: np.ndarray, x_prev: np.ndarray):
-        """ Feature function, see (5) in [1] """
+        """Feature function, see (5) in [1]"""
         return self.h((self.m_lo * u + self.m_lo * self.c_lo - x_prev) / self.m_lo)
 
     def f_2(self, u: np.ndarray, x_prev: np.ndarray):
-        """ Feature function, see (6) in [1] """
+        """Feature function, see (6) in [1]"""
         return self.h((x_prev - self.m_up * u + self.m_up * self.c_up) / self.m_up)
 
     def fit(self, u: np.ndarray, x: np.ndarray, x_prev: np.ndarray, num_epoch: int = 20):

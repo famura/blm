@@ -1,5 +1,5 @@
-import pytest
 import numpy as np
+import pytest
 
 import blm
 from tests.conftest import m_needs_pyplot
