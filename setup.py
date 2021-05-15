@@ -15,9 +15,9 @@ setup(
     author="Fabio Muratore",
     author_email="fabio.muratore@famura.net",
     classifiers=[  # list of valid classifiers, see https://pypi.org/classifiers/
-        "Development Status :: 4 - Beta",
-        "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
+        "Development Status :: 5 - Production/Stable",
+        "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3 :: Only",
