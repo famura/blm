@@ -7,7 +7,7 @@ here = pathlib.Path(__file__).parent.resolve()
 setup(
     # This is the name of your project as to be published at PyPI: https://pypi.org/project/sampleproject/
     name="blm",  # https://packaging.python.org/specifications/core-metadata/#name
-    version="1.0",  # https://www.python.org/dev/peps/pep-0440/
+    version="1.1",  # https://www.python.org/dev/peps/pep-0440/
     description="A simple model to describe the backlash effect in physics simulations",
     long_description=(here / "README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
@@ -19,7 +19,6 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3 :: Only",
     ],
     keywords="backlash, simulation, physics, modeling",
