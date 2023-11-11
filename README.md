@@ -9,9 +9,9 @@ A simple model to describe the backlash effect in physics simulations based on n
 The model implemented in this package was published as:  
 J. Vörös, "Modeling and identification of systems with backlash", Automatica, 2008, [link to pdf](https://www.researchgate.net/profile/Jozef-Voeroes/publication/233692268_Identification_of_cascade_systems_with_backlash/links/56b3535f08ae3d06a266451d/Identification-of-cascade-systems-with-backlash.pdf)
 
-## Citing
+## Support
 
-If you use code or ideas from this repository for your projects or research, please cite it.
+If you use code or ideas from this repository for your projects or research, **please cite it**.
 ```
 @misc{Muratore_blm,
   author = {Fabio Muratore},
