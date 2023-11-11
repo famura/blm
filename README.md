@@ -1,8 +1,10 @@
 # Backlash Model with Linear Decision Boundaries (blm)
 
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![python-versions](https://img.shields.io/pypi/pyversions/blm)](https://img.shields.io/pypi/pyversions/blm)
 [![codecov](https://codecov.io/gh/famura/blm/branch/master/graph/badge.svg?token=ESUTNFwtYY)](https://codecov.io/gh/famura/blm)
-[![codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![isort](https://img.shields.io/badge/imports-isort-black)](https://pycqa.github.io/isort/)
 
 A simple model to describe the backlash effect in physics simulations based on numpy
 
