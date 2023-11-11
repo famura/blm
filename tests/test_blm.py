@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 import blm
-from tests.conftest import m_needs_pyplot
+from tests.conftest import needs_pyplot
 
 
 @pytest.mark.parametrize("model_param", [dict(m_lo=1.1, m_up=0.9, c_lo=0.1, c_up=0.2)])
@@ -51,7 +51,7 @@ def test_invalid_ctor_params(ctor_param: dict):
         blm.BacklashModel(**ctor_param)
 
 
-@pytest.mark.parametrize("plot", [pytest.param(True, marks=[m_needs_pyplot, pytest.mark.visual]), False])
+@pytest.mark.parametrize("plot", [pytest.param(True, marks=[needs_pyplot, pytest.mark.visual]), False])
 @pytest.mark.parametrize("model_param", [dict(m_lo=2.0, m_up=1.9, c_lo=2.5, c_up=2.7)])
 @pytest.mark.parametrize("apply_u_bl", [False])
 def test_all(model_param: dict, apply_u_bl: bool, plot: bool):

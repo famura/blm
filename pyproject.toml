@@ -23,3 +23,18 @@ exclude = '''
   | dist
 )/
 '''
+
+[tool.pytest.ini_options]
+addopts = [
+  "--capture=tee-sys",
+  "--full-trace",
+  "--junit-xml=pytest.xml",
+  "--showlocals",
+  "--strict-markers",
+  "-ra",
+]
+markers = [
+    "visual: marks tests that produce plots or animations (deselect with '-m \"not visual\"')",
+]
+pythonpath = [".", "blm"]
+testpaths = ["tests"]
