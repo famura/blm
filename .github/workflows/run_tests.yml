@@ -2,14 +2,18 @@ name: Run Tests
 
 on: [push, pull_request]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-images:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        #os: [ubuntu-latest]
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.8", "3.10"]
+        os: [ubuntu-latest]
+#        os: [ubuntu-latest, macos-latest, windows-latest] # macos and windows runners time out during tests
+        python-version: ["3.8", "3.10", "3.12"]
     env:
       os: ${{ matrix.os }}
       python: ${{ matrix.python-version }}
