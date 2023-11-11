@@ -7,7 +7,7 @@ import pytest
 try:
     from matplotlib import pyplot as plt
 
-    m_needs_pyplot = pytest.mark.skipif(False, reason="matplotlib.pyplot can be imported.")
+    needs_pyplot = pytest.mark.skipif(False, reason="matplotlib.pyplot can be imported.")
 
 except (ImportError, ModuleNotFoundError):
-    m_needs_pyplot = pytest.mark.skip(reason="matplotlib.pyplot is not supported in this setup.")
+    needs_pyplot = pytest.mark.skip(reason="matplotlib.pyplot is not supported in this setup.")
